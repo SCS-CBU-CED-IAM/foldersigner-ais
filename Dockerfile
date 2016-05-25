@@ -1,5 +1,5 @@
 FROM ubuntu
-MAINTAINER Freddy Kaiser <freddy.kaiser@swisscom.com>
+MAINTAINER Eva Ramon <eva.ramon@swisscom.com>
 
 # Environment settings and defaults if not passed
 ENV CUSTOMER_ID="customer"

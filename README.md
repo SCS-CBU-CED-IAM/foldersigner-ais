@@ -15,14 +15,14 @@ The source and destination folder can be specified with the Docker Volume parame
 
 To start: 
 ```
- $ docker run --name ais-foldersigner -it -d \
+ $ docker run --name foldersigner-ais -it -d \
    -e CUSTOMER_ID="IAM-Test" \
    -e CUSTOMER_KEY=kp1-iam-signer \
    -v "/home/user/mycert.crt":/opt/work/mycert.crt \
    -v "/home/user/mycert.key":/opt/work/mycert.key \
    -v "/home/user/_in_":/opt/work/in \
    -v "home/user/_out_":/opt/work/out \
-   swisscomtds/ais-foldersigner:latest
+   swisscomtds/foldersigner-ais:latest
 ```
 optional environment settings:
 ```
@@ -42,6 +42,6 @@ Infos about the `-e` settings:
 
 ## Show logs
 ```
- $ docker logs ais-foldersigner
+ $ docker logs foldersigner-ais
 ```
 
