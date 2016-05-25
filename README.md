@@ -1,4 +1,4 @@
-ais-foldersigner docker image
+foldersigner-ais docker image
 ================================
 
 Docker Image to digitally sign or timestamp PDF's in a specific folder over Swisscom All-in Signing Service.
@@ -22,7 +22,7 @@ To start:
    -v "/home/user/mycert.key":/opt/work/mycert.key \
    -v "/home/user/_in_":/opt/work/in \
    -v "home/user/_out_":/opt/work/out \
-   fkaiser/ais-foldersigner:latest
+   swisscomtds/ais-foldersigner:latest
 ```
 optional environment settings:
 ```
