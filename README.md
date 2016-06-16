@@ -1,7 +1,7 @@
-foldersigner-ais
+foldersigner-docker
 ================================
 
-This is the source repository for the docker image at https://hub.docker.com/r/swisscomtds/foldersigner-ais/
+This is the source repository for the docker image at https://hub.docker.com/r/swisscomtds/foldersigner-docker/
 
 Digitally sign or timestamp PDF's in a specific folder over Swisscom All-in Signing Service.
 
