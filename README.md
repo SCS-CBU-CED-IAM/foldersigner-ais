@@ -1,7 +1,7 @@
-foldersigner-docker
+foldersigner-ais
 ================================
 
-This is the source repository for the docker image at https://hub.docker.com/r/swisscomtds/foldersigner-docker/
+This is the source repository for the docker image at https://hub.docker.com/r/swisscomtds/foldersigner-ais/
 
 Digitally sign or timestamp PDF's in a specific folder over Swisscom All-in Signing Service.
 
@@ -18,8 +18,8 @@ The source and destination folder can be specified with the Docker Volume parame
 To start: 
 ```
  $ docker run --name foldersigner-ais -it -d \
-   -e CUSTOMER_ID="IAM-Test" \
-   -e CUSTOMER_KEY=kp1-iam-signer \
+   -e CUSTOMER_ID="My_Customer_Name" \
+   -e CUSTOMER_KEY="My_Key_Identity" \
    -v "/home/user/mycert.crt":/opt/work/mycert.crt \
    -v "/home/user/mycert.key":/opt/work/mycert.key \
    -v "/home/user/_in_":/opt/work/in \
@@ -31,6 +31,7 @@ optional environment settings:
    -e DIGEST_METHOD=SHA256 \
    -e SIGNATURE_TYPE=sign \
    -e TZ=Europe/Paris \
+   -e _JAVA_OPTIONS="-Dhttps.proxyHost=myproxy.mycompany.com -Dhttps.proxyPort=8080"
 ```
 
 Infos about the `-e` settings:
@@ -40,6 +41,7 @@ Infos about the `-e` settings:
 * DIGEST_METHOD: Digest Method [SHA256 (default), SHA384, SHA512]
 * SIGNATURE_TYPE: Signature Type [sign (default), timestamp]
 * TZ: Timezone of the docker image [Europe/Paris, ...]
+* _JAVA_OPTIONS: Necessary if running behind a corporate proxy.
 
 ## Docker How To (Windows)
 
@@ -60,8 +62,8 @@ $ pwd
 Start the Docker Image:
 ```
 $ docker run --name foldersigner-ais -it -d \
-   -e CUSTOMER_ID="IAM-Test" \
-   -e CUSTOMER_KEY=kp1-iam-signer \
+   -e CUSTOMER_ID="My_Customer_Name" \
+   -e CUSTOMER_KEY="My_Key_Identity" \
    -v "/c/Users/alice/mycert.crt":/opt/work/mycert.crt \
    -v "/c/Users/alice/mycert.key":/opt/work/mycert.key \
    -v "/c/Users/alice/in":/opt/work/in \
