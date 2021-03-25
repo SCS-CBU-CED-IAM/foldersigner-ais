@@ -1,3 +1,6 @@
+# Migrated to: https://github.com/SwisscomTrustServices/foldersigner-ais
+Please use only this repository.
+
 foldersigner-ais
 ================================
 
